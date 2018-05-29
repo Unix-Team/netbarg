@@ -1,248 +1,23 @@
-<!DOCTYPE html>
-<html lang="fa"><!--[if lt IE 9]>
+
+<!DOCTYPE html><html lang="fa"><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv"></script>
 <script src="https://oss.maxcdn.com/libs/respond/1.4.2/respond.min"></script>
-<![endif]-->
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
-    <meta charset="utf-8"/>
-    <title>راهنمای خرید نت برگ</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <script type="text/javascript">window.NREUM || (NREUM = {}), __nr_require = function (e, t, n) {
-        function r(n) {
-            if (!t[n]) {
-                var o = t[n] = {exports: {}};
-                e[n][0].call(o.exports, function (t) {
-                    var o = e[n][1][t];
-                    return r(o || t)
-                }, o, o.exports)
-            }
-            return t[n].exports
-        }
-
-        if ("function" == typeof __nr_require) return __nr_require;
-        for (var o = 0; o < n.length; o++) r(n[o]);
-        return r
-    }({
-        1: [function (e, t, n) {
-            function r() {
-            }
-
-            function o(e, t, n) {
-                return function () {
-                    return i(e, [f.now()].concat(u(arguments)), t ? null : this, n), t ? void 0 : this
-                }
-            }
-
-            var i = e("handle"), a = e(2), u = e(3), c = e("ee").get("tracer"), f = e("loader"), s = NREUM;
-            "undefined" == typeof window.newrelic && (newrelic = s);
-            var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
-                d = "api-", l = d + "ixn-";
-            a(p, function (e, t) {
-                s[t] = o(d + t, !0, "api")
-            }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), t.exports = newrelic, s.interaction = function () {
-                return (new r).get()
-            };
-            var m = r.prototype = {
-                createTracer: function (e, t) {
-                    var n = {}, r = this, o = "function" == typeof t;
-                    return i(l + "tracer", [f.now(), e, n], r), function () {
-                        if (c.emit((o ? "" : "no-") + "fn-start", [f.now(), r, o], n), o) try {
-                            return t.apply(this, arguments)
-                        } catch (e) {
-                            throw c.emit("fn-err", [arguments, this, e], n), e
-                        } finally {
-                            c.emit("fn-end", [f.now()], n)
-                        }
-                    }
-                }
-            };
-            a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (e, t) {
-                m[t] = o(l + t)
-            }), newrelic.noticeError = function (e) {
-                "string" == typeof e && (e = new Error(e)), i("err", [e, f.now()])
-            }
-        }, {}], 2: [function (e, t, n) {
-            function r(e, t) {
-                var n = [], r = "", i = 0;
-                for (r in e) o.call(e, r) && (n[i] = t(r, e[r]), i += 1);
-                return n
-            }
-
-            var o = Object.prototype.hasOwnProperty;
-            t.exports = r
-        }, {}], 3: [function (e, t, n) {
-            function r(e, t, n) {
-                t || (t = 0), "undefined" == typeof n && (n = e ? e.length : 0);
-                for (var r = -1, o = n - t || 0, i = Array(o < 0 ? 0 : o); ++r < o;) i[r] = e[t + r];
-                return i
-            }
-
-            t.exports = r
-        }, {}], 4: [function (e, t, n) {
-            t.exports = {exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart}
-        }, {}], ee: [function (e, t, n) {
-            function r() {
-            }
-
-            function o(e) {
-                function t(e) {
-                    return e && e instanceof r ? e : e ? c(e, u, i) : i()
-                }
-
-                function n(n, r, o, i) {
-                    if (!d.aborted || i) {
-                        e && e(n, r, o);
-                        for (var a = t(o), u = m(n), c = u.length, f = 0; f < c; f++) u[f].apply(a, r);
-                        var p = s[y[n]];
-                        return p && p.push([b, n, r, a]), a
-                    }
-                }
-
-                function l(e, t) {
-                    v[e] = m(e).concat(t)
-                }
-
-                function m(e) {
-                    return v[e] || []
-                }
-
-                function w(e) {
-                    return p[e] = p[e] || o(n)
-                }
-
-                function g(e, t) {
-                    f(e, function (e, n) {
-                        t = t || "feature", y[n] = t, t in s || (s[t] = [])
-                    })
-                }
-
-                var v = {}, y = {},
-                    b = {on: l, emit: n, get: w, listeners: m, context: t, buffer: g, abort: a, aborted: !1};
-                return b
-            }
-
-            function i() {
-                return new r
-            }
-
-            function a() {
-                (s.api || s.feature) && (d.aborted = !0, s = d.backlog = {})
-            }
-
-            var u = "nr@context", c = e("gos"), f = e(2), s = {}, p = {}, d = t.exports = o();
-            d.backlog = s
-        }, {}], gos: [function (e, t, n) {
-            function r(e, t, n) {
-                if (o.call(e, t)) return e[t];
-                var r = n();
-                if (Object.defineProperty && Object.keys) try {
-                    return Object.defineProperty(e, t, {value: r, writable: !0, enumerable: !1}), r
-                } catch (i) {
-                }
-                return e[t] = r, r
-            }
-
-            var o = Object.prototype.hasOwnProperty;
-            t.exports = r
-        }, {}], handle: [function (e, t, n) {
-            function r(e, t, n, r) {
-                o.buffer([e], r), o.emit(e, t, n)
-            }
-
-            var o = e("ee").get("handle");
-            t.exports = r, r.ee = o
-        }, {}], id: [function (e, t, n) {
-            function r(e) {
-                var t = typeof e;
-                return !e || "object" !== t && "function" !== t ? -1 : e === window ? 0 : a(e, i, function () {
-                    return o++
-                })
-            }
-
-            var o = 1, i = "nr@id", a = e("gos");
-            t.exports = r
-        }, {}], loader: [function (e, t, n) {
-            function r() {
-                if (!x++) {
-                    var e = h.info = NREUM.info, t = d.getElementsByTagName("script")[0];
-                    if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && t)) return s.abort();
-                    f(y, function (t, n) {
-                        e[t] || (e[t] = n)
-                    }), c("mark", ["onload", a() + h.offset], null, "api");
-                    var n = d.createElement("script");
-                    n.src = "https://" + e.agent, t.parentNode.insertBefore(n, t)
-                }
-            }
-
-            function o() {
-                "complete" === d.readyState && i()
-            }
-
-            function i() {
-                c("mark", ["domContent", a() + h.offset], null, "api")
-            }
-
-            function a() {
-                return E.exists && performance.now ? Math.round(performance.now()) : (u = Math.max((new Date).getTime(), u)) - h.offset
-            }
-
-            var u = (new Date).getTime(), c = e("handle"), f = e(2), s = e("ee"), p = window, d = p.document,
-                l = "addEventListener", m = "attachEvent", w = p.XMLHttpRequest, g = w && w.prototype;
-            NREUM.o = {
-                ST: setTimeout,
-                SI: p.setImmediate,
-                CT: clearTimeout,
-                XHR: w,
-                REQ: p.Request,
-                EV: p.Event,
-                PR: p.Promise,
-                MO: p.MutationObserver
-            };
-            var v = "" + location, y = {
-                    beacon: "bam.nr-data.net",
-                    errorBeacon: "bam.nr-data.net",
-                    agent: "js-agent.newrelic.com/nr-1071.min.js"
-                }, b = w && g && g[l] && !/CriOS/.test(navigator.userAgent),
-                h = t.exports = {offset: u, now: a, origin: v, features: {}, xhrWrappable: b};
-            e(1), d[l] ? (d[l]("DOMContentLoaded", i, !1), p[l]("load", r, !1)) : (d[m]("onreadystatechange", o), p[m]("onload", r)), c("mark", ["firstbyte", u], null, "api");
-            var x = 0, E = e(4)
-        }, {}]
-    }, {}, ["loader"]);</script>
-    <meta hreflang="fa-IR" href="http://netbarg.com/" rel="alternate"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <meta name="keywords"
-          content="نت برگ,NetBarg,خرید گروهی,خرید,تخفیف,تخفیف گروهی,سایت خرید گروهی,الکترونیکی,اینترنتی,آنلاین,فروش آنلاین,تهران,حراج,حراجی,کوپن,رستوران,کالا,تفریح"/>
-    <meta name="author" content="سایت خرید و تخفیف گروهی نت برگ"/>
-    <meta name="description"
-          content="سایت تخفیف و خرید گروهی نت برگ، فروشگاهی آنلاین برای خرید اینترنتی انواع پیشنهادات با۴۰% تا۹۰% تخفیف، با یک ایمیل به صورت رایگان مشترک شوید."/>
-    <link href="/favicon.ico" type="image/x-icon" rel="icon"/>
-    <link href="/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:site" content="netbarg"/>
-    <meta name="twitter:creator" content="netbarg"/>
-    <meta name="og:type" content="website"/>
-    <meta name="og:site_name" content="netbarg"/>
-    <meta name="og:title" content="راهنمای خرید نت برگ"/>
-    <meta name="og:description"
-          content="سایت تخفیف و خرید گروهی نت برگ، فروشگاهی آنلاین برای خرید اینترنتی انواع پیشنهادات با۴۰% تا۹۰% تخفیف، با یک ایمیل به صورت رایگان مشترک شوید."/>
-    <meta name="og:image" content=""/>
-    <meta name="article:publisher" content=""/>
-    <meta/>
-    <link rel="stylesheet" href="assets/site/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="assets/site/css/bootstrap-rtl.min.css"/>
-    <link rel="stylesheet" href="assets/site/css/owl.carousel.min.css"/>
-    <link rel="stylesheet" href="assets/site/css/owl.theme.css"/>
-    <link rel="stylesheet" href="assets/site/css/jquery-ui.min.css"/>
-    <link rel="stylesheet" href="assets/site/css/jquery-ui.structure.min.css"/>
-    <link rel="stylesheet" href="assets/site/css/jquery-ui.theme.min.css"/>
-    <link rel="stylesheet" href="assets/site/css/range-slider.css"/>
-    <link rel="stylesheet" href="assets/site/css/jquery.ui.slider-rtl.css"/>
-    <link rel="stylesheet" href="assets/site/css/select2.min.css"/>
-    <link rel="stylesheet" href="assets/site/css/kit.css?v=1.1.3"/>
-    <link rel="stylesheet" href="assets/site/css/animate.css"/>
-    <link rel="stylesheet" href="assets/site/fonts/iran_sans/fontiran.css"/>
-    <link rel="stylesheet" href="assets/site/css/AutoComplete/easy-autocomplete.css"/>
-    <link rel="stylesheet" href="assets/site/css/AutoComplete/easy-autocomplete.themes.css"/>
+<![endif]--><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"><meta charset="utf-8" /><title>تماس با ما</title><meta http-equiv="X-UA-Compatible" content="IE=edge" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><meta hreflang="fa-IR" href="http://netbarg.com/" rel="alternate" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta name="keywords" content="نت برگ,NetBarg,خرید گروهی,خرید,تخفیف,تخفیف گروهی,سایت خرید گروهی,الکترونیکی,اینترنتی,آنلاین,فروش آنلاین,تهران,حراج,حراجی,کوپن,رستوران,کالا,تفریح" /><meta name="author" content="سایت خرید و تخفیف گروهی نت برگ" /><meta name="description" content="سایت تخفیف و خرید گروهی نت برگ، فروشگاهی آنلاین برای خرید اینترنتی انواع پیشنهادات با۴۰% تا۹۰% تخفیف، با یک ایمیل به صورت رایگان مشترک شوید." /><link href="/favicon.ico" type="image/x-icon" rel="icon" /><link href="/favicon.ico" type="image/x-icon" rel="shortcut icon" /><meta name="twitter:card" content="summary" /><meta name="twitter:site" content="netbarg" /><meta name="twitter:creator" content="netbarg" /><meta name="og:type" content="website" /><meta name="og:site_name" content="netbarg" /><meta name="og:title" content="تماس با ما" /><meta name="og:description" content="سایت تخفیف و خرید گروهی نت برگ، فروشگاهی آنلاین برای خرید اینترنتی انواع پیشنهادات با۴۰% تا۹۰% تخفیف، با یک ایمیل به صورت رایگان مشترک شوید." /><meta name="og:image" content="" /><meta name="article:publisher" content="" /><meta />
+    <link rel="stylesheet" href="assets/site/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/site/css/bootstrap-rtl.min.css" />
+    <link rel="stylesheet" href="assets/site/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/site/css/owl.theme.css" />
+    <link rel="stylesheet" href="assets/site/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="assets/site/css/jquery-ui.structure.min.css" />
+    <link rel="stylesheet" href="assets/site/css/jquery-ui.theme.min.css" />
+    <link rel="stylesheet" href="assets/site/css/range-slider.css" />
+    <link rel="stylesheet" href="assets/site/css/jquery.ui.slider-rtl.css" />
+    <link rel="stylesheet" href="assets/site/css/select2.min.css" />
+    <link rel="stylesheet" href="assets/site/css/kit.css?v=1.1.3" />
+    <link rel="stylesheet" href="assets/site/css/animate.css" />
+    <link rel="stylesheet" href="assets/site/fonts/iran_sans/fontiran.css" />
+    <link rel="stylesheet" href="assets/site/css/AutoComplete/easy-autocomplete.css" />
+    <link rel="stylesheet" href="assets/site/css/AutoComplete/easy-autocomplete.themes.css" />
     <script src="assets/site/js/jquery-1.12.0.min.js"></script>
     <script src="assets/site/js/bootstrap.min.js"></script>
     <script src="assets/site/js/jquery.touchSwipe.min.js"></script>
@@ -264,22 +39,18 @@
     <script src="assets/site/js/client-function.js"></script>
     <script src="assets/site/js/AutoComplete/jquery.easy-autocomplete.js?v=1.0.4"></script>
     <script src="assets/site/js/elastic.js"></script>
-</head>
-<body>
-<div class="madJaxWait hidden">
+</head><body><div class="madJaxWait hidden">
     <div class="loading-content">
         <div class="spinner">
             <div class="loader">
                 <svg viewBox="25 25 50 50" class="circular">
-                    <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"
-                            class="path"></circle>
+                    <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" class="path"></circle>
                 </svg>
             </div>
             <p>لطفا کمی منتظر بمانید</p>
         </div>
     </div>
-</div>
-<header>
+</div><header>
     <div class="t-fix"></div>
     <div class="tape-1"></div>
     <div style="background: #151043;" class="top-ads-row hidden-xs clearfix">
@@ -287,71 +58,61 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-22">
-                    <a target="_blank"
-                       href="http://netbarg.com/landing/Ramadan97/?utm_source=netbarg&utm_medium=occasional-banner&utm_campaign=ramadan97"
-                       class="figure m-b">
-                        <img src="http://static.netbarg.com/img/banner/banners/occasionsBanner/53/317b055c.jpg"
-                             class="img-responsive">
+                    <a target="_blank" href="http://netbarg.com/landing/Ramadan97/?utm_source=netbarg&utm_medium=occasional-banner&utm_campaign=ramadan97" class="figure m-b">
+                        <img src="http://static.netbarg.com/img/banner/banners/occasionsBanner/53/317b055c.jpg" class="img-responsive">
                     </a>
                 </div>
                 <div class="col-md-1"></div>
             </div>
         </div>
-    </div>
-    <div class="header">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-1 hidden-sm hidden-xs"></div>
-                <div class="burger-col hidden-lg hidden-md col-xs-8"><i class="burger-icon"><i
-                        class="icon icon-menu-options"></i></i></div>
-                <div class="col-md-6 col-xs-8 col-logo ">
-                    <a href="/tehran/" class="logo"><img src="assets/site/img/netbarg.png" class="img-responsive"></a>
-                </div>
-                <div class="btn-col hidden-lg hidden-md col-xs-8"><i class="header-icon toggle-search-js"><i
-                        class="icon icon-search"></i></i>
-                    <a href="/tehran/baskets/">
-                        <i class="header-icon">
-                            <i class="icon icon-shopping-cart_main_r crm"></i>
-                            <span class="basket-item-quantity">0</span>
-                        </i>
+    </div> <div class="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1 hidden-sm hidden-xs"></div>
+            <div class="burger-col hidden-lg hidden-md col-xs-8"><i class="burger-icon"><i class="icon icon-menu-options"></i></i></div>
+            <div class="col-md-6 col-xs-8 col-logo ">
+                <a href="/tehran/" class="logo"><img src="assets/site/img/netbarg.png" class="img-responsive"></a>
+            </div>
+            <div class="btn-col hidden-lg hidden-md col-xs-8"><i class="header-icon toggle-search-js"><i class="icon icon-search"></i></i>
+                <a href="/tehran/baskets/">
+                    <i class="header-icon">
+                        <i class="icon icon-shopping-cart_main_r crm"></i>
+                        <span class="basket-item-quantity">0</span>
+                    </i>
+                </a>
+            </div>
+            <div class="col-md-10 col-xs-24 hidden-sm hidden-xs toggle-hidden">
+                <form id="search-form" method="get" class="search" action="/tehran/search/">
+                    <div style="overflow: visible" class="search-form-box input-btn site-search"><i class="icon icon-arrow-back search-close hidden"></i>
+                        <input name="q" id="search-box" type="text" placeholder="جستجو (رستوران، مکان ورزشی، کالا، ...)">
+                        <button class="btn btn-warning btn-type-1">جستجو</button>
+                        <i id="closeSearchResult" class="icon icon-close search-clean hidden"></i>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 hidden-sm hidden-xs">
+                <div class="clearfix">
+                    <a href="/tehran/dealMap/" class="on-map-deals">
+                        <img src="assets/site/img/netbarghaye-roye-naghshe.svg">
+                        <span>نت‌برگ‌های روی نقشه</span>
                     </a>
                 </div>
-                <div class="col-md-10 col-xs-24 hidden-sm hidden-xs toggle-hidden">
-                    <form id="search-form" method="get" class="search" action="/tehran/search/">
-                        <div style="overflow: visible" class="search-form-box input-btn site-search"><i
-                                class="icon icon-arrow-back search-close hidden"></i>
-                            <input name="q" id="search-box" type="text"
-                                   placeholder="جستجو (رستوران، مکان ورزشی، کالا، ...)">
-                            <button class="btn btn-warning btn-type-1">جستجو</button>
-                            <i id="closeSearchResult" class="icon icon-close search-clean hidden"></i>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-md-6 hidden-sm hidden-xs">
-                    <div class="clearfix">
-                        <a href="/tehran/dealMap/" class="on-map-deals">
-                            <img src="assets/site/img/netbarghaye-roye-naghshe.svg">
-                            <span>نت‌برگ‌های روی نقشه</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-1 hidden-sm hidden-xs"></div>
             </div>
+            <div class="col-md-1 hidden-sm hidden-xs"></div>
         </div>
     </div>
+</div>
     <div class="bar clearfix">
         <div class="bar-wrapper">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-1 hidden-sm hidden-xs"></div>
                     <div class="col-lg-3 col-md-4 hidden-sm hidden-xs">
-                        <div class="clearfix"><a href="/02-Site/netbarg/" class="home-link"><i class="icon icon-home"></i></a>
-                        </div>
+                        <div class="clearfix"><a href="/02-Site/netbarg/" class="home-link"><i class="icon icon-home"></i></a></div>
                     </div>
                     <div class="col-lg-13 col-md-11 clearfix mobile">
                         <div class="dropdown dropdown-1">
-                            <button type="button" data-toggle="dropdown"
-                                    class="btn btn-primary dropdown-toggle selected-city" city-id="42546">
+                            <button type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle selected-city" city-id="42546">
                                 تهران <span class="inline-block icon icon-arrow-down"></span></button>
                             <ul class="dropdown-menu">
                                 <li><a href="/isfahan/">
@@ -374,55 +135,44 @@
                                     <span class="badge"></span>
                                 </a>
                                 </li>
-                                <li><a href="#" type="button" data-toggle="modal" data-target="#mapModal"
-                                       class="cities_map"><span class="pull-right"> تمامی شهر ها</span><span
-                                        class="map_icon icon icon-more-fill"></span></a></li>
+                                <li><a href="#" type="button" data-toggle="modal" data-target="#mapModal" class="cities_map"><span class="pull-right"> تمامی شهر ها</span><span class="map_icon icon icon-more-fill"></span></a></li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-7 hidden-sm hidden-xs">
-                        <a href="/tehran/baskets/">
-                            <div class="basket-wrapper">
+                    </div> <div class="col-lg-6 col-md-7 hidden-sm hidden-xs">
+                    <a href="/tehran/baskets/">
+                        <div class="basket-wrapper">
 <span class="badge">
 <i class="basket-item-quantity">0</i>
 </span>
-                                <i class="icon icon-shopping-cart_main"></i>
-                            </div>
-                        </a>
-                        <div class="login-dropdown clearfix">
-                            <a data-toggle="dropdown" href="#Page" class="dropdown-toggle">
-                                <div style="background-image:url(assets/site/img/user-pic.png)"
-                                     class="avatar inline-block"></div>
-                                <span class="avatar-info inline-block">
+                            <i class="icon icon-shopping-cart_main"></i>
+                        </div>
+                    </a>
+                    <div class="login-dropdown clearfix">
+                        <a data-toggle="dropdown" href="#Page" class="dropdown-toggle">
+                            <div style="background-image:url(assets/site/img/user-pic.png)" class="avatar inline-block"></div>
+                            <span class="avatar-info inline-block">
 <p class="name">حسین بیکی</p>
 <p class="credit">
 <span>موجودی: ۰ تومان</span>
 </p>
 </span>
-                                <span class="inline-block icon icon-arrow-down"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/user/userProfiles/index#tab1" data-tab="#tab1"><span><i
-                                        class="icon icon-user-avatar"></i></span>ویرایش پروفایل شخصی</a></li>
-                                <li><a href="/user/userProfiles/index#tab2" data-tab="#tab2"><span><i
-                                        class="icon icon-wallet"></i></span>کیـف
-                                    پول</a></li>
-                                <li><a href="/user/userProfiles/index#tab3" data-tab="#tab3"><span><i
-                                        class="icon icon-logo_e"></i></span>نت
-                                    برگ های من</a></li>
-                                <li><a href="/user/userProfiles/index#tab4" data-tab="#tab4"><span><i
-                                        class="icon icon-transaction"></i></span>تراکنش ها</a></li>
-                                <li><a href="/user/userProfiles/index#tab5" data-tab="#tab5"><span><i
-                                        class="icon icon-Comment"></i></span>نظرات
-                                    من</a></li>
-                                <li><a href="/user/userProfiles/index#tab6" data-tab="#tab6"><span><i
-                                        class="icon icon-favorite"></i></span>علاقه
-                                    مندی ها</a></li>
-                                <li><a href="/tehran/users/logout"><span><i
-                                        class="icon icon-logout"></i></span>خـروج</a></li>
-                            </ul>
-                        </div>
+                            <span class="inline-block icon icon-arrow-down"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/user/userProfiles/index#tab1" data-tab="#tab1"><span><i class="icon icon-user-avatar"></i></span>ویرایش پروفایل شخصی</a></li>
+                            <li><a href="/user/userProfiles/index#tab2" data-tab="#tab2"><span><i class="icon icon-wallet"></i></span>کیـف
+                                پول</a></li>
+                            <li><a href="/user/userProfiles/index#tab3" data-tab="#tab3"><span><i class="icon icon-logo_e"></i></span>نت
+                                برگ های من</a></li>
+                            <li><a href="/user/userProfiles/index#tab4" data-tab="#tab4"><span><i class="icon icon-transaction"></i></span>تراکنش ها</a></li>
+                            <li><a href="/user/userProfiles/index#tab5" data-tab="#tab5"><span><i class="icon icon-Comment"></i></span>نظرات
+                                من</a></li>
+                            <li><a href="/user/userProfiles/index#tab6" data-tab="#tab6"><span><i class="icon icon-favorite"></i></span>علاقه
+                                مندی ها</a></li>
+                            <li><a href="/tehran/users/logout"><span><i class="icon icon-logout"></i></span>خـروج</a></li>
+                        </ul>
                     </div>
+                </div>
                     <div class="col-md-1 hidden-sm hidden-xs"></div>
                 </div>
             </div>
@@ -445,8 +195,7 @@
         <div class="wrapper">
             <div class="login-dropdown clearfix">
                 <a data-toggle="dropdown" href="#Page" class="dropdown-toggle">
-                    <div style="background-image:url(assets/site/img/user-pic.png)"
-                         class="avatar inline-block hidden-sm hidden-xs"></div>
+                    <div style="background-image:url(assets/site/img/user-pic.png)" class="avatar inline-block hidden-sm hidden-xs"></div>
                     <span class="avatar-info inline-block">
 <p class="name">حسین بیکی</p>
 <p class="credit">
@@ -456,18 +205,15 @@
                     <span class="inline-block icon icon-arrow-down"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="/user/userProfiles/index#tab1" data-tab="#tab1"><span><i
-                            class="icon icon-user-avatar"></i></span>ویرایش پروفایل شخصی</a></li>
+                    <li><a href="/user/userProfiles/index#tab1" data-tab="#tab1"><span><i class="icon icon-user-avatar"></i></span>ویرایش پروفایل شخصی</a></li>
                     <li><a href="/user/userProfiles/index#tab2" data-tab="#tab2"><span><i class="icon icon-wallet"></i></span>کیـف
                         پول</a></li>
                     <li><a href="/user/userProfiles/index#tab3" data-tab="#tab3"><span><i class="icon icon-logo_e"></i></span>نت
                         برگ های من</a></li>
-                    <li><a href="/user/userProfiles/index#tab4" data-tab="#tab4"><span><i
-                            class="icon icon-transaction"></i></span>تراکنش ها</a></li>
+                    <li><a href="/user/userProfiles/index#tab4" data-tab="#tab4"><span><i class="icon icon-transaction"></i></span>تراکنش ها</a></li>
                     <li><a href="/user/userProfiles/index#tab5" data-tab="#tab5"><span><i class="icon icon-Comment"></i></span>نظرات
                         من</a></li>
-                    <li><a href="/user/userProfiles/index#tab6" data-tab="#tab6"><span><i
-                            class="icon icon-favorite"></i></span>علاقه
+                    <li><a href="/user/userProfiles/index#tab6" data-tab="#tab6"><span><i class="icon icon-favorite"></i></span>علاقه
                         مندی ها</a></li>
                     <li><a href="/tehran/users/logout"><span><i class="icon icon-logout"></i></span>خـروج</a></li>
                 </ul>
@@ -480,10 +226,8 @@
             </div>
             <nav>
                 <ul class="side-cat" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-                    <li class="li-home"><a href="/02-Site/netbarg/"><i><i
-                            class="icon icon-home"></i></i><span>صفحه اصلی</span></a></li>
-                    <li class="li-all" itemprop="name"><a itemprop="url" href="/tehran/c:all/"><i><i
-                            class="icon icon-menu"></i></i><span>همه پیشنهادها</span></a>
+                    <li class="li-home"><a href="/02-Site/netbarg/"><i><i class="icon icon-home"></i></i><span>صفحه اصلی</span></a></li>
+                    <li class="li-all" itemprop="name"><a itemprop="url" href="/tehran/c:all/"><i><i class="icon icon-menu"></i></i><span>همه پیشنهادها</span></a>
                     </li>
                     <li class="sc li-restaurant">
                         <a itemprop="url" href="/tehran/c:restaurant/" data-toggle="collapse" data-target="#sub-menu-8">
@@ -493,11 +237,9 @@
                             <span itemprop="name">رستوران و فست فود</span>
                         </a>
                         <ul id="sub-menu-8" class="clearfix">
-                            <li itemprop="name"><a itemprop="url" href="/tehran/c:traditionalrestaurants/">غذای ايرانی و
-                                سنتی</a>
+                            <li itemprop="name"><a itemprop="url" href="/tehran/c:traditionalrestaurants/">غذای ايرانی و سنتی</a>
                             </li>
-                            <li itemprop="name"><a itemprop="url" href="/tehran/c:italianrestaurants/">غذای ایتالیایی و
-                                ملل</a>
+                            <li itemprop="name"><a itemprop="url" href="/tehran/c:italianrestaurants/">غذای ایتالیایی و ملل</a>
                             </li>
                             <li itemprop="name"><a itemprop="url" href="/tehran/c:fastfood/">فست فود</a>
                             </li>
@@ -512,8 +254,7 @@
                         </ul>
                     </li>
                     <li class="sc li-entertainment">
-                        <a itemprop="url" href="/tehran/c:entertainment/" data-toggle="collapse"
-                           data-target="#sub-menu-6">
+                        <a itemprop="url" href="/tehran/c:entertainment/" data-toggle="collapse" data-target="#sub-menu-6">
                             <i>
                                 <i class="icon icon-basketball"></i>
                             </i>
@@ -524,17 +265,13 @@
                             </li>
                             <li itemprop="name"><a itemprop="url" href="/tehran/c:hotels/">هتل و اقامتگاه</a>
                             </li>
-                            <li itemprop="name"><a itemprop="url" href="/tehran/c:funactivities/">تفریحات هیجان
-                                انگیز</a>
+                            <li itemprop="name"><a itemprop="url" href="/tehran/c:funactivities/">تفریحات هیجان انگیز</a>
                             </li>
-                            <li itemprop="name"><a itemprop="url" href="/tehran/c:amusementpark/">شهربازی و مراکز
-                                تفریحی</a>
+                            <li itemprop="name"><a itemprop="url" href="/tehran/c:amusementpark/">شهربازی و مراکز تفریحی</a>
                             </li>
-                            <li itemprop="name"><a itemprop="url" href="/tehran/c:groupgames/">بازی های گروهی و زمین
-                                بازی</a>
+                            <li itemprop="name"><a itemprop="url" href="/tehran/c:groupgames/">بازی های گروهی و زمین بازی</a>
                             </li>
-                            <li itemprop="name"><a itemprop="url" href="/tehran/c:swimmingpool/">استخر و ورزش های
-                                آبی</a>
+                            <li itemprop="name"><a itemprop="url" href="/tehran/c:swimmingpool/">استخر و ورزش های آبی</a>
                             </li>
                             <li itemprop="name"><a itemprop="url" href="/tehran/c:aerobics/">ورزش های هوایی</a>
                             </li>
@@ -552,13 +289,11 @@
                         <ul id="sub-menu-15" class="clearfix">
                             <li itemprop="name"><a itemprop="url" href="/tehran/c:laser/">لیزر موهای زائد</a>
                             </li>
-                            <li itemprop="name"><a itemprop="url" href="/tehran/c:othermedicalservices/">سایر خدمات
-                                پزشکی</a>
+                            <li itemprop="name"><a itemprop="url" href="/tehran/c:othermedicalservices/">سایر خدمات پزشکی</a>
                             </li>
                             <li itemprop="name"><a itemprop="url" href="/tehran/c:botox/">ژل و بوتاکس</a>
                             </li>
-                            <li itemprop="name"><a itemprop="url" href="/tehran/c:fitness/">خدمات تناسب اندام و
-                                لاغری</a>
+                            <li itemprop="name"><a itemprop="url" href="/tehran/c:fitness/">خدمات تناسب اندام و لاغری</a>
                             </li>
                             <li itemprop="name"><a itemprop="url" href="/tehran/c:massage/">ماساژ</a>
                             </li>
@@ -642,11 +377,9 @@
                             <span itemprop="name">کالا</span>
                         </a>
                         <ul id="sub-menu-5" class="clearfix">
-                            <li itemprop="name"><a itemprop="url" href="/tehran/c:originalproducts/">برندهای
-                                اورجینال</a>
+                            <li itemprop="name"><a itemprop="url" href="/tehran/c:originalproducts/">برندهای اورجینال</a>
                             </li>
-                            <li itemprop="name"><a itemprop="url" href="/tehran/c:economicalproducts/">کالاهای
-                                اقتصادی</a>
+                            <li itemprop="name"><a itemprop="url" href="/tehran/c:economicalproducts/">کالاهای اقتصادی</a>
                             </li>
                         </ul>
                     </li>
@@ -657,18 +390,13 @@
                             </i>
                             <span>لحظه آخری</span>
                         </a>
-                    </li>
-                    <li class="sc li-fav" itemprop="name"><a itemprop="url" href="/tehran/c:favorite/" class="org"><i><i
-                            class="icon icon-favorite"></i></i><span>علاقه مندی</span></a>
-                    </li>
-                </ul>
-            </nav>
+                    </li> <li class="sc li-fav" itemprop="name"><a itemprop="url" href="/tehran/c:favorite/" class="org"><i><i class="icon icon-favorite"></i></i><span>علاقه مندی</span></a>
+                </li>
+                </ul> </nav>
             <div class="spacer"></div>
             <ul class="side-extra-items">
-                <li><a href="tel:+982142091000"><i><i class="icon icon-home-phone"></i></i><span>۰۲۱-۴۲۰۹۱۰۰۰</span></a>
-                </li>
-                <li><a href="buy-netbarg.html"><i><i class="icon icon-lifebuoy"></i></i><span>راهنمای خرید</span></a>
-                </li>
+                <li><a href="tel:+982142091000"><i><i class="icon icon-home-phone"></i></i><span>۰۲۱-۴۲۰۹۱۰۰۰</span></a></li>
+                <li><a href="buy-netbarg.html"><i><i class="icon icon-lifebuoy"></i></i><span>راهنمای خرید</span></a></li>
             </ul>
         </div>
     </div>
@@ -759,295 +487,123 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-22 col-md-22 col-sm-24 col-xs-24 clearfix page-static-howTobuy">
-                        <div class="wrapper-howTobuy">
-                            <div class="header-howTobuy">
-                                <h1 class="ft-3">راهنمای خرید نت‌برگ</h1>
+                    </div> <div class="col-lg-22 col-md-22 col-sm-24 col-xs-24 clearfix page-contactus">
+                    <div class="art-border">
+                        <div class="cu-top"><span>ارتباط با ما</span></div>
+                        <article class="netbarg-map">
+                            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6kPYfAIcF24ueC_ZmMBf_HOVntqoVuMA&amp;language=fa&amp;region=IR"></script>
+                            <div id="dealLocation">
+                                <div id="onMap"></div>
                             </div>
-                            <div class="body-howTobuy">
-                                <div class="wizard-circle">
-                                    <div class="circle-full animated fadeIn">
-                                        <div class="circle-section"><img src="assets/site/img/icon/pen.png">
-                                            <div class="circle-number">1</div>
+                        </article>
+                        <div class="row tw-col">
+                            <div data-wow-delay=".3s" data-wow-duration=".8s" class="col-sm-12 wow fadeIn">
+                                <article class="cu cu-call clearfix">
+                                    <header class="section-header margin-b20">
+                                        <h6 class="hx"><span class="article-h3">فرم تماس</span></h6>
+                                    </header>
+                                </article>
+                                <form class="cu personal-pro ajaxform" mj-type="form" mj-target="/subscriptions/sendEmail.json" mj-method="post" method="post">
+                                    <div class="nameandfname">
+                                        <div class="row">
+                                            <div class="col-xs-12 form-group req input-label-animate">
+                                                <div class="input text">
+                                                    <label for="pe1">نام</label>
+                                                    <input id="pe1" maxlength="50" name="fname" class="single-input required-input">
+                                                </div>
+                                                <span class="hint danger"></span>
+                                            </div>
+                                            <div class="col-xs-12 form-group req input-label-animate">
+                                                <div class="input text">
+                                                    <label for="pe2">نام خانوادگی</label>
+                                                    <input id="pe2" maxlength="50" name="lname" class="single-input required-input">
+                                                </div>
+                                                <span class="hint danger"></span>
+                                            </div>
+                                            <div class="col-xs-24 form-group req input-label-animate">
+                                                <div class="input text">
+                                                    <label for="pe3">ایمیل</label>
+                                                    <input id="pe3" maxlength="50" type="email" name="useremail" class="single-input required-input emailcheck">
+                                                </div>
+                                                <span class="hint danger"></span>
+                                            </div>
+                                            <div class="col-xs-24 form-group req input-label-animate">
+                                                <div class="input text">
+                                                    <label for="pe4">موبایل</label>
+                                                    <input id="pe4" maxlength="11" name="mobilenumber" class="single-input required-input phonenumber-check">
+                                                </div>
+                                                <span class="hint danger"></span>
+                                            </div>
+                                            <div class="col-xs-24 form-group req">
+                                                <select class="single-select required-input" name="department">
+                                                    <option value="1">پشتیبانی از مشتریان</option>
+                                                    <option value="2">فنی</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xs-24 form-group req input-label-animate">
+                                                <label for="donate4">پیام شما</label>
+                                                <textarea id="donate4" name="message" class="single-input required-input"></textarea>
+                                            </div>
+                                            <div class="col-xs-24">
+                                                <button type="submit" class="nb-btn nb-btn-success pull-left">ارسال</button>
+                                            </div>
                                         </div>
-                                        <p class="ft-5">ورود / عضویت</p>
                                     </div>
-                                    <div class="circle-dashed animated0 fadeIn">
-                                        <div class="circle-section-dashed"></div>
-                                        <i class="icon icon-arrow-left"></i>
-                                    </div>
-                                    <div class="circle-full animated1 fadeIn">
-                                        <div class="circle-section"><img src="assets/site/img/icon/click.png">
-                                            <div class="circle-number">2</div>
-                                        </div>
-                                        <p class="ft-5">انتخاب محصول</p>
-                                    </div>
-                                    <div class="circle-dashed animated0 fadeIn">
-                                        <div class="circle-section-dashed"></div>
-                                        <i class="icon icon-arrow-left"></i>
-                                    </div>
-                                    <div class="circle-full animated2 fadeIn">
-                                        <div class="circle-section"><img src="assets/site/img/icon/add.png">
-                                            <div class="circle-number">3</div>
-                                        </div>
-                                        <p class="ft-5">سبد خرید</p>
-                                    </div>
-                                    <div class="circle-dashed animated0 fadeIn">
-                                        <div class="circle-section-dashed"></div>
-                                        <i class="icon icon-arrow-left"></i>
-                                    </div>
-                                    <div class="circle-full animated3 fadeIn">
-                                        <div class="circle-section"><img src="assets/site/img/icon/card.png">
-                                            <div class="circle-number">4</div>
-                                        </div>
-                                        <p class="ft-5">عملیات پرداخت</p>
-                                    </div>
-                                    <div class="circle-dashed animated0 fadeIn">
-                                        <div class="circle-section-dashed"></div>
-                                        <i class="icon icon-arrow-left"></i>
-                                    </div>
-                                    <div class="circle-full animated4 fadeIn">
-                                        <div class="circle-section"><img src="assets/site/img/icon/netbarg.png">
-                                            <div class="circle-number">5</div>
-                                        </div>
-                                        <p class="ft-5">دریافت نت‌برگ</p>
-                                    </div>
-                                </div>
-                                <div class="row"></div>
+                                </form>
                             </div>
-                            <section id="htb1">
-                                <div class="row">
-                                    <div class="col-lg-8 col-md-8">
-                                        <div class="description animated4 fadeIn"><span>1</span>
-                                            <h1 class="ft-2">ورود یا عضویت در سایت نت‌برگ</h1>
-                                            <p class="ft-5">
-                                                روی گزینه ورود/ثبت نام کلیک کنید. اگر قبلا عضو نت‌برگ بوده اید با ایمیل
-                                                و رمزعبور خود وارد شوید در غیر این صورت اطلاعات خود را در قسمت ثبت نام
-                                                وارد کنید. برای خرید از سایت باید اطلاعات خود را وارد کنید، این اطلاعات
-                                                فقط برای ارائه خدمات بهتر جمع آوری می شود.
-                                                می توانید با استفاده از اکانت یاهو و یا گوگل به سرعت وارد سایت شوید
-                                                همچنین در قسمت آدرس، اگر کالایی را خریداری می کنید که قرار است برای شما
-                                                ارسال شود، آدرس و کد پستی خود رابه دقت بنویسید.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-16 col-md-16">
-                                        <div class="img-guide-1 wow fadeIn"><img src="assets/site/img/howtobuy1.jpg"
-                                                                                 class="img-responsive pull-left big animated5fadeIn"><img
-                                                src="assets/site/img/help1-zoom.png"
-                                                class="img-responsive zoom animated6 fadeInLeft"></div>
-                                    </div>
-                                </div>
-                            </section>
-                            <section id="htb2">
-                                <div class="row">
-                                    <div class="col-lg-8 col-md-8 col-lg-push-16 col-md-push-16">
-                                        <div data-wow-duration="0.8s" class="description wow fadeIn"><span>2</span>
-                                            <h1 class="ft-2">انتخاب نت‌برگ خود</h1>
-                                            <p class="ft-5">برای خرید از وب سایت نت‌برگ از طریق دسته بندی ها یا از بین
-                                                نت‌برگ های روز که داغ ترین پیشنهادهای ما هستند خدمات دلخواه خود را
-                                                انتخاب کنید و روی دکمه مشاهده و خرید کلیک کنید.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-16 col-md-16 col-lg-pull-8 col-md-pull-8">
-                                        <div data-wow-duration="0.8s" data-wow-delay="0.4s"
-                                             class="img-guide-1 wow fadeIn"><img src="assets/site/img/htb-help2.jpg"
-                                                                                 class="img-responsive big"></div>
-                                    </div>
-                                </div>
-                            </section>
-                            <section id="htb3">
-                                <div class="row">
-                                    <div class="col-lg-8 col-md-8">
-                                        <div data-wow-duration="0.8s" class="description wow fadeIn"><span></span>
-                                            <h1 class="ft-2">مشاهده جزئیات نت‌برگ انتخابی</h1>
-                                            <p class="ft-5">
-                                                پس از آنکه نت‌برگ مورد نظر خودتان را انتخاب کردید به صفحه مشخصات وارد می
-                                                شوید .در این صفحه ویژگی ها و اطلاعات مربوط به نت‌برگی که قصد خرید آن را
-                                                دارید مانند: شرایط و ساعات استفاده تاریخ انقضا و موقعیت مکانی نت‌برگ به
-                                                صورت مفصل ذکر شده است،
-                                                پس از آن می توانید نت‌برگ مورد نظر را به سبد خرید خود اضافه کنید و با
-                                                دیگر نت‌برگ های موجود در سبد یکجا پرداخت نمایید (اضافه به سبد) و یا
-                                                اینکه اقدام به خرید تکی همان نت‌برگ ( خرید نت‌برگ) نمایید.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-16 col-md-16">
-                                        <div data-wow-duration="0.8s" data-wow-delay="0.4s"
-                                             class="img-guide-1 wow fadeIn"><img src="assets/site/img/htb-help3.jpg"
-                                                                                 class="img-responsive pull-left big">
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                            <section id="htb4">
-                                <div class="row">
-                                    <div class="col-lg-24 col-md-24">
-                                        <div data-wow-duration="0.8s" class="description center wow fadeIn">
-                                            <span>3</span>
-                                            <h1 class="ft-2">ورود به سبد خرید</h1>
-                                            <div class="line-border"></div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-14 col-md-14 col-lg-offset-5 col-md-offset-5 col-xs-22 col-xs-offset-1">
-                                            <p data-wow-duration="0.8s" data-wow-delay="0.4s"
-                                               class="ft-5 text-center wow fadeIn">با کلیک بر روی دکمه خرید نت‌برگ به
-                                                صفحه سبد خرید منتقل می شوید در صورتیکه هنوز وارد نشده اید یا ثبت نام
-                                                نکرده اید در این مرحله نیز می توانید عملیات ورود یا ثبت نام را انجام
-                                                دهید و سپس بقیه مراحل را طی کنید.</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-20 col-md-20 col-lg-offset-2 col-md-offset-2">
-                                            <div class="img-guide-big"><img src="assets/site/img/htb-help4-0.jpg"
-                                                                            data-wow-duration="0.8s"
-                                                                            data-wow-delay="0.8s"
-                                                                            class="img-responsive big wow fadeIn"><img
-                                                    src="assets/site/img/htb-help4-1.png" data-wow-delay="1.4s"
-                                                    data-wow-duration=".8s" class="img-responsive zoom1 wow fadeInDown"><img
-                                                    src="assets/site/img/htb-help4-2.png" data-wow-delay="1.6s"
-                                                    data-wow-duration=".8s" class="img-responsive zoom2 wow fadeInLeft"><img
-                                                    src="assets/site/img/htb-help4-3.png" data-wow-delay="1.8s"
-                                                    data-wow-duration=".8s" class="img-responsive zoom3 wow fadeInUp">
-                                            </div>
-                                            <div class="img-guide-small"><img src="assets/site/img/htb-help4.png"
-                                                                              data-wow-duration="0.8s"
-                                                                              data-wow-delay="0.8s"
-                                                                              class="img-responsive wow fadeIn"></div>
-                                            <div data-wow-duration="0.8s" class="item-number wow fadeIn">
-                                                <p class="ft-5"><span class="number">1</span>می توانید نت‌برگ خود را به
-                                                    دیگران هدیه دهید کافیست بدین منظور مشخصات و ایمیل شخص مورد نظر را
-                                                    وارد کنید. </p>
-                                                <p class="ft-5"><span class="number">2</span>در صورت داشتن کد هدیه با
-                                                    وارد کردن آن از مبلغ پرداختی شما به همان میزان کسر خواهد شد.</p>
-                                                <p class="ft-5"><span class="number">3</span>هم چنین در قسمت آدرس، اگر
-                                                    کالایی را خریداری می کنید که قرار است برای شما ارسال شود، آدرس و کد
-                                                    پستی خود رابه دقت بنویسید. </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                            <section id="htb5">
-                                <div class="row">
-                                    <div class="col-lg-24 col-md-24">
-                                        <div data-wow-duration="0.8s" class="description center wow fadeIn">
-                                            <span>4</span>
-                                            <h1 class="ft-2">پرداخت</h1>
-                                            <div class="line-border"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-14 col-md-14 col-lg-offset-5 col-md-offset-5">
-                                        <p data-wow-delay="0.4s" class="text-center wow fadeIn">شما به دو روش میتوانید
-                                            پرداخت خود را انجام دهید:</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-10 col-sm-push-7">
-                                        <div data-wow-duration="0.8s" data-wow-delay="0.8s"
-                                             class="img-guide-1 wow fadeIn"><img src="assets/site/img/htb-help5.jpg"
-                                                                                 class="img-responsive"></div>
-                                    </div>
-                                    <div class="col-sm-7 col-sm-pull-10">
-                                        <div data-wow-duration="0.8s" data-wow-delay="1.2s" class="htb-box wow fadeIn">
-                                            <span class="number">1</span>
-                                            <h1 class="ft-4">پرداخت آنلاین با کارت های بانکی عضو شتاب:</h1>
-                                            <p class="ft-5">شما می توانید با هر نوع کارت بانکی از تمامی این درگاه ها
-                                                اقدام به پرداخت نمایید.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <div data-wow-duration="0.8s" data-wow-delay="1.2s" class="htb-box wow fadeIn">
-                                            <span class="number">2</span>
-                                            <h1 class="ft-4">پرداخت کارت به کارت:</h1>
-                                            <p class="ft-5">برای پرداخت کارت به کارت می بایست مبلغ خرید خود را به صورت
-                                                بانکی به حساب جاری<br>2-1444188-8-835
-                                                در بانک سامان واریز کنید و یا از طریق شبکه شتاب به کارت شماره<br>7791-1013-8610-6219
-                                                به نام آقای علیرضا صادقیان و یا خانم بهناز صلح جو انتقال دهید.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                            <section id="htb-detail">
-                                <div class="row">
-                                    <div data-wow-duration="0.8s" class="col-lg-24 col-md-24 wow fadeIn">
-                                        <div class="description center"><span class="blue-border"><img
-                                                src="assets/site/img/icon/signal.png"></span></div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="row">
-                                        <div data-wow-duration="0.8s" data-wow-delay="0.1s"
-                                             class="col-lg-14 col-md-14 col-lg-offset-5 col-md-offset-5 wow fadeIn">
-                                            <div class="border-custom">
-                                                <p class="ft-5">اگر ارتباط آنلاین شما پس از ورود به صفحه تایید پرداخت
-                                                    دچار مشکل شود و یا به هر دلیلی خرید شما به سایت نت‌برگ ارجاع نشود
-                                                    مبلغ کسر شده از حساب به صورت امانت نزد بانک واسط باقی می ماند و
-                                                    حداکثر ظرف مدت 72 ساعت به حساب شما برخواهد گشت.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                            <section id="htb6">
-                                <div class="row">
-                                    <div class="col-lg-8 col-md-8">
-                                        <div data-wow-duration="0.8s" class="description wow fadeIn"><span>5</span>
-                                            <h1 class="ft-2">دریافت نت‌برگ های خریداری شده</h1>
-                                            <p class="ft-5">برای استفاده از نت‌برگ خود می بایست کد اختصاصی خود را به
-                                                فروشنده تحویل دهید. نت‌برگ به چهار روش کدهای عمومی و اختصاصی را در
-                                                اختیار شما می گذارد. </p>
-                                            <p class="ft-5">الف ) کدها به ایمیلی که با آن ثبت نام کردید ارسال می شود</p>
-                                            <p class="ft-5">ب ) هردو کد اختصاصی و عمومی به تلفن همراه شما پیامک می
-                                                شود.</p>
-                                            <p class="ft-5">ج ) در صفحه حساب شخصی خود و در تب نت‌برگ های من، کدهای شما
-                                                ذخیره می شود</p>
-                                            <p class="ft-5">د ) می توانید کدهای خود را پس از ورود به صفحه تایید پرداخت و
-                                                در همان جا مشاهده کنید..</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-16 col-md-16">
-                                        <div data-wow-duration="0.8s" data-wow-delay="0.4s"
-                                             class="img-guide-1 wow fadeIn"><img src="assets/site/img/htb-help6.png"
-                                                                                 class="img-responsive pull-left big">
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
+                            <div data-wow-delay=".9s" data-wow-duration=".8s" class="col-sm-12 wow fadeIn">
+                                <article class="cu cu-call clearfix">
+                                    <header class="section-header margin-b20">
+                                        <h6 class="hx"><span class="article-h3">راه های ارتباطی دیگر</span></h6>
+                                    </header>
+                                    <ul class="clearfix">
+                                        <li><i class="icon icon-location74"></i><span> آدرس شرکت : خیابان بخارست، خیابان یکم، پلاک 12، طبقه 4</span></li>
+                                        <li><i class="icon icon-phone-call"></i><a href="tel:02142091000" class="tel"> تماس با پشتیبانی : 42091000 (021)</a></li>
+                                    </ul>
+                                </article>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-1 col-md-1 hidden-sm hidden-xs left-aside sticky-aside">
-                        <div id="nava2" class="affix-top">
-                            <div class="float-left-button">
-                                <ul><a href="javascript:void(0)">
-                                    <li><i><i class="icon icon-home-phone"></i></i><span>۰۲۱-۴۲۰۹۱۰۰۰</span></li>
+                </div><script>function myNet() {
+                    var mapCanvas = document.getElementById("onMap");
+                    var myCenter = new google.maps.LatLng(35.7287152,51.4165614);
+                    var mapOptions = {center: myCenter, zoom: 15,disableDefaultUI: false};
+                    var map = new google.maps.Map(mapCanvas,mapOptions);
+
+                    var marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(35.7287152,51.4165614),
+                        icon:'assets/site/img/pin.png',
+                        animation: google.maps.Animation.DROP
+                    });
+
+                    marker.setMap(map);
+                }
+
+                $(document).ready(function(){
+                    myNet();
+                })</script> <div class="col-lg-1 col-md-1 hidden-sm hidden-xs left-aside sticky-aside">
+                    <div id="nava2" class="affix-top">
+                        <div class="float-left-button">
+                            <ul><a href="javascript:void(0)">
+                                <li><i><i class="icon icon-home-phone"></i></i><span>۰۲۱-۴۲۰۹۱۰۰۰</span></li>
+                            </a>
+                                <a href="buy-netbarg.html">
+                                    <li><i><i class="icon icon-lifebuoy"></i></i><span>راهنمای خرید نت برگ</span></li>
                                 </a>
-                                    <a href="buy-netbarg.html">
-                                        <li><i><i class="icon icon-lifebuoy"></i></i><span>راهنمای خرید نت برگ</span>
-                                        </li>
-                                    </a>
-                                    <a href="contactus.html">
-                                        <li class="active"><i><i
-                                                class="icon icon-mail"></i></i><span>ارتباط با ما</span></li>
-                                    </a>
-                                    <a href="javascript:void(0)" class="backtotop">
-                                        <li><i><i class="icon icon-arrow-up"></i></i></li>
-                                    </a>
-                                </ul>
-                            </div>
+                                <a href="contactus.html">
+                                    <li class="active"><i><i class="icon icon-mail"></i></i><span>ارتباط با ما</span></li>
+                                </a>
+                                <a href="javascript:void(0)" class="backtotop">
+                                    <li><i><i class="icon icon-arrow-up"></i></i></li>
+                                </a>
+                            </ul>
                         </div>
                     </div>
-                </div>
+                </div> </div>
             </div>
         </div>
     </div>
-</main>
-<footer>
+</main><footer>
     <div class="row-newslatter">
         <div class="container-fluid">
             <div class="row">
@@ -1058,15 +614,10 @@
                             شوید</h6>
                     </hgroup>
                     <div class="col-lg-10 col-lg-10 col-lg-offset-7 col-sm-16 col-sm-offset-4">
-                        <form method="post" accept-charset="utf-8" class="search" mj-type="form"
-                              mj-target="/subscriptions/subscribeEmail.json" mj-method="post"
-                              mj-success="subscribeEmail" action="buy-netbarg.html">
-                            <div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>
+                        <form method="post" accept-charset="utf-8" class="search" mj-type="form" mj-target="/subscriptions/subscribeEmail.json" mj-method="post" mj-success="subscribeEmail" action="/contactus/"><div style="display:none;"><input type="hidden" name="_method" value="POST" /></div>
                             <div class="dropdown-input-btn site-search newslatter">
                                 <div class="dropdown">
-                                    <button type="button" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="true" class="btn btn-default dropdown-toggle"><span
-                                            id="city-name">تهران</span><i class="icon icon-arrow-down"></i></button>
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn btn-default dropdown-toggle"><span id="city-name">تهران</span><i class="icon icon-arrow-down"></i></button>
                                     <ul class="dropdown-menu">
                                         <li><span data-id="42598">اراک</span></li>
                                         <li><span data-id="42575">اردبیل</span></li>
@@ -1106,31 +657,21 @@
                                 <input name="email" type="email" placeholder="ایمیل خود را وارد کنید">
                                 <button type="submit" class="btn btn-warning btn-type-1">مشترک شوید</button>
                             </div>
-                        </form>
-                    </div>
+                        </form> </div>
                 </section>
             </div>
         </div>
     </div>
     <div class="row-award">
-        <img src="assets/site/img/fg1.png" alt="netbarg aw" data-toggle="tooltip" data-placement="top" title=""
-             class="toggle-me" data-original-title="همایش تجلیل از چهره‌های کارآفرین و مدیران موفق">
-        <img src="assets/site/img/fg2.png" alt="netbarg aw" data-toggle="tooltip" data-placement="top" title=""
-             class="toggle-me" data-original-title="دومین اجلاس جهانی نشان منتخب">
-        <img src="assets/site/img/fg4.png" alt="netbarg aw" data-toggle="tooltip" data-placement="top" title=""
-             class="toggle-me" data-original-title="برگزیده همایش نام‌آوران دانش و فناوران کشور">
-        <img src="assets/site/img/fg5.png" alt="netbarg aw" data-toggle="tooltip" data-placement="top" title=""
-             class="toggle-me" data-original-title="همایش مدیران خلاق">
-        <img src="assets/site/img/fg6.png" alt="netbarg aw" data-toggle="tooltip" data-placement="top" title=""
-             class="toggle-me" data-original-title="همایش بین‌المللی تجارت و اقتصاد الکترونیکی">
-        <img src="assets/site/img/fg7.png" alt="netbarg aw" data-toggle="tooltip" data-placement="top" title=""
-             class="toggle-me" data-original-title="جشنواره وب 93">
-        <img src="assets/site/img/fg8.png" alt="netbarg aw" data-toggle="tooltip" data-placement="top" title=""
-             class="toggle-me" data-original-title="نشان سرآمدی دیجیتال">
-        <img src="assets/site/img/fg9.png" alt="netbarg aw" data-toggle="tooltip" data-placement="top" title=""
-             class="toggle-me" data-original-title="جشنواره وب 94">
-        <img src="assets/site/img/fg10.png" alt="netbarg aw" data-toggle="tooltip" data-placement="top" title=""
-             class="toggle-me" data-original-title="جشنواره وب 96"></div>
+        <img src="assets/site/img/fg1.png" alt="netbarg aw" data-toggle="tooltip" data-placement="top" title="" class="toggle-me" data-original-title="همایش تجلیل از چهره‌های کارآفرین و مدیران موفق">
+        <img src="assets/site/img/fg2.png" alt="netbarg aw" data-toggle="tooltip" data-placement="top" title="" class="toggle-me" data-original-title="دومین اجلاس جهانی نشان منتخب">
+        <img src="assets/site/img/fg4.png" alt="netbarg aw" data-toggle="tooltip" data-placement="top" title="" class="toggle-me" data-original-title="برگزیده همایش نام‌آوران دانش و فناوران کشور">
+        <img src="assets/site/img/fg5.png" alt="netbarg aw" data-toggle="tooltip" data-placement="top" title="" class="toggle-me" data-original-title="همایش مدیران خلاق">
+        <img src="assets/site/img/fg6.png" alt="netbarg aw" data-toggle="tooltip" data-placement="top" title="" class="toggle-me" data-original-title="همایش بین‌المللی تجارت و اقتصاد الکترونیکی">
+        <img src="assets/site/img/fg7.png" alt="netbarg aw" data-toggle="tooltip" data-placement="top" title="" class="toggle-me" data-original-title="جشنواره وب 93">
+        <img src="assets/site/img/fg8.png" alt="netbarg aw" data-toggle="tooltip" data-placement="top" title="" class="toggle-me" data-original-title="نشان سرآمدی دیجیتال">
+        <img src="assets/site/img/fg9.png" alt="netbarg aw" data-toggle="tooltip" data-placement="top" title="" class="toggle-me" data-original-title="جشنواره وب 94">
+        <img src="assets/site/img/fg10.png" alt="netbarg aw" data-toggle="tooltip" data-placement="top" title="" class="toggle-me" data-original-title="جشنواره وب 96"></div>
     <div class="row-offer">
         <div class="container-fluid">
             <div class="row">
@@ -1171,18 +712,13 @@
                             <div class="imager dis-table"><img src="assets/site/img/mobile.png" alt="netbarg app">
                             </div>
                             <div class="linker dis-table">
-                                <a target="_blank" href="https://new.sibapp.com/applications/netbarg"
-                                   class="dis-block tx-direct-left">
+                                <a target="_blank" href="https://new.sibapp.com/applications/netbarg" class="dis-block tx-direct-left">
                                     <img src="assets/site/img/app-sib.png">
                                 </a>
-                                <a target="_blank"
-                                   href="https://play.google.com/store/apps/details?id=com.IranModernBusinesses.Netbarg&hl=en"
-                                   class="dis-block tx-direct-left">
+                                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.IranModernBusinesses.Netbarg&hl=en" class="dis-block tx-direct-left">
                                     <img src="assets/site/img/app-googleplay.png">
                                 </a>
-                                <a target="_blank"
-                                   href="https://cafebazaar.ir/app/com.IranModernBusinesses.Netbarg/?l=en"
-                                   class="dis-block tx-direct-left">
+                                <a target="_blank" href="https://cafebazaar.ir/app/com.IranModernBusinesses.Netbarg/?l=en" class="dis-block tx-direct-left">
                                     <img src="assets/site/img/app-bazar.png">
                                 </a>
                             </div>
@@ -1196,7 +732,7 @@
                         </ul>
                         <ul class="col-lg-5 col-md-5 col-sm-6 col-xs-12 nth-2">
                             <li>ارتباط با ما</li>
-                            <li><a href="/contactus/">تماس با ما</a></li>
+                            <li><a href="contactus.html">تماس با ما</a></li>
                             <li><a href="/page/netbarg-agents/">دریافت نمایندگی</a></li>
                             <li><a href="/page/netbarg-for-your-biz/">نت&zwnj;برگ برای کسب و کار شما</a></li>
                         </ul>
@@ -1236,7 +772,7 @@
                                         <span class="tx-direct-left">
 <a href="tel:+982142091000">
 <span class="number-s"> ۴۲۰۹۱۰۰۰</span><span class="number-s">- ۰۲۱</span>
- </a>
+</a>
 </span>
                                     </div>
                                     <div class="rfcr-contact dis-none-767"><span>با ما در تماس باشید : </span>
@@ -1246,23 +782,7 @@
                                     </div>
                                     <div class="rfcr-dash dis-none-767"><span></span>
                                     </div>
-                                    <div class="rfcr-soc"><a href="https://telegram.me/joinchat/Bb5JSzvzBUylEDxkuH0Vbg"
-                                                             target="_blank"><i aria-hidden="true"
-                                                                                class="icon icon-telegram-logo"></i></a><a
-                                            href="https://www.youtube.com/user/NetBarg" target="_blank"><i
-                                            aria-hidden="true" class="icon icon-youtube-logo"></i></a><a
-                                            href="https://www.pinterest.com/netbarg/" target="_blank"><i
-                                            aria-hidden="true" class="icon icon-pinterest-logo"></i></a><a
-                                            href="http://instagram.com/mynetbarg" target="_blank"><i aria-hidden="true"
-                                                                                                     class="icon icon-instagram-logo"></i></a><a
-                                            href="http://www.linkedin.com/company/NetBarg" target="_blank"><i
-                                            aria-hidden="true" class="icon icon-linkedin-letters"></i></a><a
-                                            href="https://plus.google.com/+NetBargCo/posts" target="_blank"><i
-                                            aria-hidden="true" class="icon icon-google-plus"></i></a><a
-                                            href="https://twitter.com/NetBarg" target="_blank"><i aria-hidden="true"
-                                                                                                  class="icon icon-twitter"></i></a><a
-                                            href="https://www.facebook.com/NetBarg" target="_blank"><i
-                                            aria-hidden="true" class="icon icon-facebook-logo"></i></a>
+                                    <div class="rfcr-soc"><a href="https://telegram.me/joinchat/Bb5JSzvzBUylEDxkuH0Vbg" target="_blank"><i aria-hidden="true" class="icon icon-telegram-logo"></i></a><a href="https://www.youtube.com/user/NetBarg" target="_blank"><i aria-hidden="true" class="icon icon-youtube-logo"></i></a><a href="https://www.pinterest.com/netbarg/" target="_blank"><i aria-hidden="true" class="icon icon-pinterest-logo"></i></a><a href="http://instagram.com/mynetbarg" target="_blank"><i aria-hidden="true" class="icon icon-instagram-logo"></i></a><a href="http://www.linkedin.com/company/NetBarg" target="_blank"><i aria-hidden="true" class="icon icon-linkedin-letters"></i></a><a href="https://plus.google.com/+NetBargCo/posts" target="_blank"><i aria-hidden="true" class="icon icon-google-plus"></i></a><a href="https://twitter.com/NetBarg" target="_blank"><i aria-hidden="true" class="icon icon-twitter"></i></a><a href="https://www.facebook.com/NetBarg" target="_blank"><i aria-hidden="true" class="icon icon-facebook-logo"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -1288,7 +808,7 @@
 <a href="http://chilivery.com" target="_blank" title="chilivery">
 <img src="assets/site/img/chilivery-logo.png">
 </a><a href="http://tik8.com/" target="_blank" title="tik8">
- <img src="assets/site/img/tik8-logo.png">
+<img src="assets/site/img/tik8-logo.png">
 </a>
 <a href="http://saremiz.ir/" target="_blank" title="saremiz">
 <img src="assets/site/img/saremiz-logo.jpg">
@@ -1297,12 +817,9 @@
 <img src="assets/site/img/drdr-logo.png">
 </a>
 </span>
-                        <span>نت‌برگ اولین و بزرگترین سایت تخفیف گروهی در ایران است که به صورت روزانه پیشنهاداتی متنوع و باورنکردنی را با ۴۰ تا ۹۹ درصد تخفیف از بهترین مکان‌های شهر شامل رستوران‌ها، مراکز ورزشی، تفریحی، رفاهی، فرهنگی، هنری، بهداشتی، آرایشی و غیره را به مشتریان خود ارائه می‌دهد. «تخفیف های هیجان‌انگیز»، «خرید ارزان‌تر و بدون واسطه»، «صرفه جویی در زمان و هزینه»، «تضمین کیفیت خدمات» و «پشتیبانی کامل در تمام مراحل» برگ برنده نت‌برگ برای کاربران خود محسوب می‌شوند. نت‌برگ با بکارگیری شیوه های نوین تبلیغاتی و تمرکز روزانه روی کالا ها و سرویس های خدماتی و رفاهی، فرآیند انتخاب را برای اعضای خود آسان کرده و همچنین با استفاده از قدرت خرید گروهی پیشنهادات مورد نظر را به قیمتی عرضه می‌کند که به سختی می‌توان از خرید آن صرف نظر کرد. ایجاد بستر مناسب تحت وب از طریق وب‌سایت نت‌برگ و همچنین ارائه خدمات روی انواع گوشی‌ها و تبلت‌ها با استفاده از اپلیکیشن موبایل نت‌برگ این امکان را به خانواده میلیونی نت‌برگ می‌دهد تا در اسرع وقت و به ساده‌ترین شکل ممکن بتوانند به کلیه پیشنهادهای نت‌برگ دسترسی داشته و از امکانات ارائه‌شده آن بهره‌مند شوند. پیشنهادات نت‌برگ به طور کلی به دو دسته آنی و غیر آنی تقسیم می‌گردند که «نت‌برگ‌های آنی» بلافاصله پس از خرید تا لحظه پایان زمان استفاده آن‌ها، دارای اعتبار بوده و قابل استفاده می‌باشند. همچنین «نت‌برگ‌های غیر آنی» نیز پیشنهاداتی هستند که پس از خرید آن‌ها، کاربران می‌بایست به منظور استفاده از نت‌برگ‌های خود، تا اتمام مهلت خرید آن پیشنهاد بر روی سایت نت‌برگ، صبر نمایند. برای استفاده از نت‌برگ تنها کافی‌ست پیشنهاد مورد نظر خود را خریداری نمایید و با ارائه کد های اختصاصی خود به فروشنده که از طریق ایمیل، حساب کاربری‌ و یا پیامک در دسترس شما قرار می‌گیرند، از پیشنهاد و قیمت باورنکردنی نت ‌برگ لذت برده و لحظات خوش و زیبایی را تجربه کنید. لازم به ذکر است نت‌برگ هم‌اکنون در اکثر شهرهای بزرگ ایران مانند تهران، کرج، مشهد، اصفهان، شیراز، ارومیه و غیره مشغول به فعالیت و ارائه خدمات روزانه می‌باشد.</span>
-                    </p>
+                        <span>نت‌برگ اولین و بزرگترین سایت تخفیف گروهی در ایران است که به صورت روزانه پیشنهاداتی متنوع و باورنکردنی را با ۴۰ تا ۹۹ درصد تخفیف از بهترین مکان‌های شهر شامل رستوران‌ها، مراکز ورزشی، تفریحی، رفاهی، فرهنگی، هنری، بهداشتی، آرایشی و غیره را به مشتریان خود ارائه می‌دهد. «تخفیف های هیجان‌انگیز»، «خرید ارزان‌تر و بدون واسطه»، «صرفه جویی در زمان و هزینه»، «تضمین کیفیت خدمات» و «پشتیبانی کامل در تمام مراحل» برگ برنده نت‌برگ برای کاربران خود محسوب می‌شوند. نت‌برگ با بکارگیری شیوه های نوین تبلیغاتی و تمرکز روزانه روی کالا ها و سرویس های خدماتی و رفاهی، فرآیند انتخاب را برای اعضای خود آسان کرده و همچنین با استفاده از قدرت خرید گروهی پیشنهادات مورد نظر را به قیمتی عرضه می‌کند که به سختی می‌توان از خرید آن صرف نظر کرد. ایجاد بستر مناسب تحت وب از طریق وب‌سایت نت‌برگ و همچنین ارائه خدمات روی انواع گوشی‌ها و تبلت‌ها با استفاده از اپلیکیشن موبایل نت‌برگ این امکان را به خانواده میلیونی نت‌برگ می‌دهد تا در اسرع وقت و به ساده‌ترین شکل ممکن بتوانند به کلیه پیشنهادهای نت‌برگ دسترسی داشته و از امکانات ارائه‌شده آن بهره‌مند شوند. پیشنهادات نت‌برگ به طور کلی به دو دسته آنی و غیر آنی تقسیم می‌گردند که «نت‌برگ‌های آنی» بلافاصله پس از خرید تا لحظه پایان زمان استفاده آن‌ها، دارای اعتبار بوده و قابل استفاده می‌باشند. همچنین «نت‌برگ‌های غیر آنی» نیز پیشنهاداتی هستند که پس از خرید آن‌ها، کاربران می‌بایست به منظور استفاده از نت‌برگ‌های خود، تا اتمام مهلت خرید آن پیشنهاد بر روی سایت نت‌برگ، صبر نمایند. برای استفاده از نت‌برگ تنها کافی‌ست پیشنهاد مورد نظر خود را خریداری نمایید و با ارائه کد های اختصاصی خود به فروشنده که از طریق ایمیل، حساب کاربری‌ و یا پیامک در دسترس شما قرار می‌گیرند، از پیشنهاد و قیمت باورنکردنی نت ‌برگ لذت برده و لحظات خوش و زیبایی را تجربه کنید. لازم به ذکر است نت‌برگ هم‌اکنون در اکثر شهرهای بزرگ ایران مانند تهران، کرج، مشهد، اصفهان، شیراز، ارومیه و غیره مشغول به فعالیت و ارائه خدمات روزانه می‌باشد.</span> </p>
                     <p class="enam">
-                        <img id='drftbrgwwmcsnbpergvl' style='cursor:pointer'
-                             onclick='window.open("http://trustseal.enamad.ir/Verify.aspx?id=16825&p=nbpdhwmbaqgwwkynyncr", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")'
-                             alt='' src='http://trustseal.enamad.ir/logo.aspx?id=16825&p=lznbkzoeukaqqesgfujy'/>
+                        <img id='drftbrgwwmcsnbpergvl' style='cursor:pointer' onclick='window.open("http://trustseal.enamad.ir/Verify.aspx?id=16825&p=nbpdhwmbaqgwwkynyncr", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")' alt='' src='http://trustseal.enamad.ir/logo.aspx?id=16825&p=lznbkzoeukaqqesgfujy' />
                     </p>
                 </div>
                 <div class="col-md-1 hidden-sm hidden-xs"></div>
@@ -1310,72 +827,44 @@
         </div>
     </div>
 </footer>
-<noscript>
-    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-3DNR" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe>
-</noscript>
-<script>(function (w, d, s, l, i) {
-    w[l] = w[l] || [];
-    w[l].push({
-        'gtm.start':
-            new Date().getTime(), event: 'gtm.js'
-    });
-    var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-    j.async = true;
-    j.src =
-        '//www.googletagmanager.com/gtm.js?id=' + i + dl;
-    f.parentNode.insertBefore(j, f);
-})(window, document, 'script', 'dataLayer', 'GTM-3DNR');</script>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-3DNR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-3DNR');</script>
 <div id="signInModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal nb-modal nb-fade">
     <div role="document" class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i aria-hidden="true"
-                                                                                               class="icon icon-close"></i>
+                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i aria-hidden="true" class="icon icon-close"></i>
                 </button>
             </div>
             <div class="modal-body">
                 <div class="nb-signinup-wrapper personal-tab">
                     <h4 class="rb-header">ورود به حساب کاربری</h4>
-                    <form method="post" accept-charset="utf-8" class="personal-pro" action="/user/users/login">
-                        <div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>
-                        <div class="nameandfname">
-                            <div class="form-group req input-label-animate">
-                                <div class="input email"><label for="email">آدرس ایمیل</label><input type="email"
-                                                                                                     name="email"
-                                                                                                     class="single-input required-input emailcheck"
-                                                                                                     id="email"/></div>
-                                <span class="hint danger"></span>
-                            </div>
-                            <div class="form-group req input-label-animate">
-                                <div class="input password"><label for="password">کلمه عبور</label><input
-                                        type="password" name="password"
-                                        class="single-input required-input password-check" id="password"/></div>
-                                <span class="hint danger"></span>
-                            </div>
-                            <div class="form-group remember-forget">
-                                <div class="forget-pass"><a href="/user/users/forgotPassword">رمز عبور خود را فراموش
-                                    کرده اید؟</a></div>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="nb-btn nb-btn-success">ورود</button>
-                                <a href="javascript::" class="not-register show-page-log toggle-modal"
-                                   data-target="#signUpModal">ثبت نام نکرده اید؟</a>
-                            </div>
+                    <form method="post" accept-charset="utf-8" class="personal-pro" action="/user/users/login"><div style="display:none;"><input type="hidden" name="_method" value="POST" /></div> <div class="nameandfname">
+                        <div class="form-group req input-label-animate">
+                            <div class="input email"><label for="email">آدرس ایمیل</label><input type="email" name="email" class="single-input required-input emailcheck" id="email" /></div><span class="hint danger"></span>
                         </div>
-                    </form>
-                    <div class="section-header">
-                        <h3 class="hx">یا</h3>
+                        <div class="form-group req input-label-animate">
+                            <div class="input password"><label for="password">کلمه عبور</label><input type="password" name="password" class="single-input required-input password-check" id="password" /></div><span class="hint danger"></span>
+                        </div>
+                        <div class="form-group remember-forget">
+                            <div class="forget-pass"><a href="/user/users/forgotPassword">رمز عبور خود را فراموش کرده اید؟</a></div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="nb-btn nb-btn-success">ورود</button>
+                            <a href="javascript::" class="not-register show-page-log toggle-modal" data-target="#signUpModal">ثبت نام نکرده اید؟</a>
+                        </div>
                     </div>
+                    </form> <div class="section-header">
+                    <h3 class="hx">یا</h3>
+                </div>
                     <div class="social-pro"><span>ورود از طریق شبکه های اجتماعی</span></div>
                     <div class="clearfix so-log">
-                        <button data-url="/user/users/social/Google"
-                                class="nb-btn nb-btn-icon nb-btn-warning google-bt social-btn">ورود با گوگل<i
-                                class="icon icon-google"></i></button>
-                        <button data-url="/user/users/social/Yahoo"
-                                class="nb-btn nb-btn-icon nb-btn-warning yahoo-bt social-btn">ورود با یاهو<i
-                                class="icon icon-yahoo-big-logo"></i></button>
+                        <button data-url="/user/users/social/Google" class="nb-btn nb-btn-icon nb-btn-warning google-bt social-btn">ورود با گوگل<i class="icon icon-google"></i></button>
+                        <button data-url="/user/users/social/Yahoo" class="nb-btn nb-btn-icon nb-btn-warning yahoo-bt social-btn">ورود با یاهو<i class="icon icon-yahoo-big-logo"></i></button>
                     </div>
                     <div class="circle-sign"></div>
                     <div class="e"></div>
@@ -1383,125 +872,62 @@
             </div>
         </div>
     </div>
-</div>
-<div id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal nb-modal nb-fade">
+</div><div id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal nb-modal nb-fade">
     <div role="document" class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i aria-hidden="true"
-                                                                                               class="icon icon-close"></i>
+                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i aria-hidden="true" class="icon icon-close"></i>
                 </button>
             </div>
             <div class="modal-body">
                 <div class="nb-signinup-wrapper personal-tab">
                     <h4 class="rb-header">ثبت نام در نت برگ</h4>
-                    <form method="post" accept-charset="utf-8" class="personal-pro" action="/user/users/register">
-                        <div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>
-                        <div class="nameandfname">
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group req input-label-animate">
-                                    <div class="input text"><label for="user-profile-first-name">نام</label><input
-                                            type="text" name="user_profile[first_name]"
-                                            class="single-input required-input" id="user-profile-first-name"/></div>
-                                    <span class="hint danger"></span>
+                    <form method="post" accept-charset="utf-8" class="personal-pro" action="/user/users/register"><div style="display:none;"><input type="hidden" name="_method" value="POST" /></div> <div class="nameandfname">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group req input-label-animate">
+                                <div class="input text"><label for="user-profile-first-name">نام</label><input type="text" name="user_profile[first_name]" class="single-input required-input" id="user-profile-first-name" /></div><span class="hint danger"></span>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group req input-label-animate">
+                                <div class="input text"><label for="user-profile-last-name">نام خانوادگی</label><input type="text" name="user_profile[last_name]" class="single-input required-input" id="user-profile-last-name" /></div><span class="hint danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group req input-label-animate">
+                            <div class="input email"><label for="email">ایمیل</label><input type="email" name="email" class="single-input required-input emailcheck" id="email" /></div><span class="hint danger"></span>
+                        </div>
+                        <div class="form-group req input-label-animate">
+                            <div class="input number"><label for="phone">موبایل</label><input type="number" name="phone" class="single-input required-input phonenumbervalid" id="phone" /></div><span class="hint danger"></span>
+                        </div>
+                        <div class="form-group req input-label-animate">
+                            <div class="input password"><label for="password">کلمه عبور</label><input type="password" name="password" class="single-input required-input password-check" id="password" /></div><span class="hint danger"></span>
+                        </div>
+                        <div class="form-group req input-label-animate">
+                            <label class="hascontent">شهر محل سکونت</label>
+                            <select name="user_profile[city_id]" class="single-select required-input"><option value="">انتخاب شهر</option><option value="42598">اراک</option><option value="42575">اردبیل</option><option value="42574">ارومیه</option><option value="42576">اصفهان</option><option value="42583">اهواز</option><option value="42577">ایلام</option><option value="42582">بجنورد</option><option value="42578">بندر بوشهر</option><option value="42599">بندرعباس</option><option value="42580">بیرجند</option><option value="42573">تبریز</option><option value="42546" selected="selected">تهران</option><option value="42596">خرم‌آباد</option><option value="42595">رشت</option><option value="42586">زاهدان</option><option value="42584">زنجان</option><option value="42597">ساری</option><option value="42585">سمنان</option><option value="42590">سنندج</option><option value="42579">شهرکرد</option><option value="42587">شیراز</option><option value="42588">قزوین</option><option value="42589">قم</option><option value="42581">مشهد</option><option value="42600">همدان</option><option value="42602">کرج</option><option value="42591">کرمان</option><option value="42592">کرمانشاه</option><option value="42745">کیش</option><option value="42594">گرگان</option><option value="42593">یاسوج</option><option value="42601">یزد</option></select><span class="hint danger"></span>
+                        </div>
+                        <div class="form-group-checkbox">
+                            <div class="checkbox checkbox-success checkbox-toggle">
+                                <input type="checkbox" name="subscription" value="1" class="styled" checked="checked" id="subscription"> <label for="subscription">مایل به اطلاع از تخفیف های شهر خود به صورت روزانه می
+                                باشم.</label>
+                            </div>
+                            <div class="accept-law clearfix">
+                                <div class="checkbox checkbox-success checkbox-toggle required-chechbox checked">
+                                    <input type="checkbox" name="ruls" value="1" class="styled" checked="checked" id="ruls10"> <label sync-byButton="ruls10" for="ruls10"></label>
                                 </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group req input-label-animate">
-                                    <div class="input text"><label for="user-profile-last-name">نام
-                                        خانوادگی</label><input type="text" name="user_profile[last_name]"
-                                                               class="single-input required-input"
-                                                               id="user-profile-last-name"/></div>
-                                    <span class="hint danger"></span>
-                                </div>
+                                <span class="after-lable-rule"><a href="/page/term-and-conditions/" target="_blank" class="rules">قوانین و مقررات&nbsp;</a>را می پذیرم</span>
                             </div>
-                            <div class="form-group req input-label-animate">
-                                <div class="input email"><label for="email">ایمیل</label><input type="email"
-                                                                                                name="email"
-                                                                                                class="single-input required-input emailcheck"
-                                                                                                id="email"/></div>
-                                <span class="hint danger"></span>
-                            </div>
-                            <div class="form-group req input-label-animate">
-                                <div class="input text"><label for="phone">موبایل</label><input type="text" name="phone"
-                                                                                                class="single-input required-input phonenumbervalid"
-                                                                                                id="phone"/></div>
-                                <span class="hint danger"></span>
-                            </div>
-                            <div class="form-group req input-label-animate">
-                                <div class="input password"><label for="password">کلمه عبور</label><input
-                                        type="password" name="password"
-                                        class="single-input required-input password-check" id="password"/></div>
-                                <span class="hint danger"></span>
-                            </div>
-                            <div class="form-group req input-label-animate">
-                                <label class="hascontent">شهر محل سکونت</label>
-                                <select name="user_profile[city_id]" class="single-select required-input">
-                                    <option value="">انتخاب شهر</option>
-                                    <option value="42598">اراک</option>
-                                    <option value="42575">اردبیل</option>
-                                    <option value="42574">ارومیه</option>
-                                    <option value="42576">اصفهان</option>
-                                    <option value="42583">اهواز</option>
-                                    <option value="42577">ایلام</option>
-                                    <option value="42582">بجنورد</option>
-                                    <option value="42578">بندر بوشهر</option>
-                                    <option value="42599">بندرعباس</option>
-                                    <option value="42580">بیرجند</option>
-                                    <option value="42573">تبریز</option>
-                                    <option value="42546" selected="selected">تهران</option>
-                                    <option value="42596">خرم‌آباد</option>
-                                    <option value="42595">رشت</option>
-                                    <option value="42586">زاهدان</option>
-                                    <option value="42584">زنجان</option>
-                                    <option value="42597">ساری</option>
-                                    <option value="42585">سمنان</option>
-                                    <option value="42590">سنندج</option>
-                                    <option value="42579">شهرکرد</option>
-                                    <option value="42587">شیراز</option>
-                                    <option value="42588">قزوین</option>
-                                    <option value="42589">قم</option>
-                                    <option value="42581">مشهد</option>
-                                    <option value="42600">همدان</option>
-                                    <option value="42602">کرج</option>
-                                    <option value="42591">کرمان</option>
-                                    <option value="42592">کرمانشاه</option>
-                                    <option value="42745">کیش</option>
-                                    <option value="42594">گرگان</option>
-                                    <option value="42593">یاسوج</option>
-                                    <option value="42601">یزد</option>
-                                </select><span class="hint danger"></span>
-                            </div>
-                            <div class="form-group-checkbox">
-                                <div class="checkbox checkbox-success checkbox-toggle">
-                                    <input type="checkbox" name="subscription" value="1" class="styled"
-                                           checked="checked" id="subscription"> <label for="subscription">مایل به اطلاع
-                                    از تخفیف های شهر خود به صورت روزانه می
-                                    باشم.</label>
-                                </div>
-                                <div class="accept-law clearfix">
-                                    <div class="checkbox checkbox-success checkbox-toggle required-chechbox checked">
-                                        <input type="checkbox" name="ruls" value="1" class="styled" checked="checked"
-                                               id="ruls10"> <label sync-byButton="ruls10" for="ruls10"></label>
-                                    </div>
-                                    <span class="after-lable-rule"><a href="/page/term-and-conditions/" target="_blank"
-                                                                      class="rules">قوانین و مقررات&nbsp;</a>را می پذیرم</span>
-                                </div>
-                            </div>
-                            <div class="m-b re-captcha text-center">
-                                <script src="https://www.google.com/recaptcha/api.js?hl=fa" async defer></script>
-                                <div class="control-input captcha-net" style="display: inline-block;margin: 0 auto;">
-                                    <div align="right" class="captcha-block">
-                                        <div class="g-recaptcha"
-                                             data-sitekey="6LfyZz0UAAAAAABOhV3qPjoUSA6U-lg1I76PjhKc">
-                                        </div>
+                        </div>
+                        <div class="m-b re-captcha text-center">
+                            <script src="https://www.google.com/recaptcha/api.js?hl=fa" async defer></script>
+                            <div class="control-input captcha-net" style="display: inline-block;margin: 0 auto;">
+                                <div align="right" class="captcha-block">
+                                    <div class="g-recaptcha" data-sitekey="6LfyZz0UAAAAAABOhV3qPjoUSA6U-lg1I76PjhKc">
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <button type="submit" class="nb-btn nb-btn-warning" sync-byButton="ruls10">ثبت نام
-                                </button>
-                    </form>
-                    <a href="javascript::" class="not-register show-page-log toggle-modal" data-target="#signInModal">ورود
-                        به حساب کاربری</a>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="nb-btn nb-btn-warning" sync-byButton="ruls10">ثبت نام</button>
+                    </form> <a href="javascript::" class="not-register show-page-log toggle-modal" data-target="#signInModal">ورود به حساب کاربری</a>
                 </div>
             </div>
             <div class="section-header">
@@ -1509,12 +935,8 @@
             </div>
             <div class="social-pro"><span>ثبت نام از طریق شبکه های اجتماعی</span></div>
             <div class="clearfix so-log">
-                <button data-url="/user/users/social/Google?type=register"
-                        class="nb-btn nb-btn-icon nb-btn-warning google-bt social-btn">ثبت نام با گوگل<i
-                        class="icon icon-google"></i></button>
-                <button data-url="/user/users/social/Yahoo?type=register"
-                        class="nb-btn nb-btn-icon nb-btn-warning yahoo-bt social-btn">ثبت نام با یاهو<i
-                        class="icon icon-yahoo-big-logo"></i></button>
+                <button data-url="/user/users/social/Google?type=register" class="nb-btn nb-btn-icon nb-btn-warning google-bt social-btn">ثبت نام با گوگل<i class="icon icon-google"></i></button>
+                <button data-url="/user/users/social/Yahoo?type=register" class="nb-btn nb-btn-icon nb-btn-warning yahoo-bt social-btn">ثبت نام با یاهو<i class="icon icon-yahoo-big-logo"></i></button>
             </div>
             <div class="circle-sign"></div>
             <div class="e"></div>
@@ -1522,14 +944,11 @@
     </div>
 </div>
 </div>
-</div>
-<div id="mapModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal nb-modal nb-fade"
-     style="display: none;">
+</div><div id="mapModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal nb-modal nb-fade" style="display: none;">
     <div role="document" class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i aria-hidden="true"
-                                                                                               class="icon icon-close"></i>
+                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i aria-hidden="true" class="icon icon-close"></i>
                 </button>
                 <div class="modal-title-wrapper">
                     <h4 class="modal-title ft-3">انتخاب شهر</h4>
@@ -1540,70 +959,38 @@
                     <div class="col-md-8 col-sm-10 cities-lists pull-right col-xs-24">
                         <div class="col-md-24 text-right">
                             <ul class="list-unstyled city-ul">
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/tehran/"
-                                                                            class="map16">تهران</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/isfahan/"
-                                                                            class="map23">اصفهان</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/karaj/"
-                                                                            class="map15">کرج</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/mashhad/"
-                                                                            class="map24">مشهد</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/ghazvin/"
-                                                                            class="map8">قزوین</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/arak/"
-                                                                            class="map14">اراک</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/ardebil/"
-                                                                            class="map2">اردبیل</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/oroomieh/"
-                                                                            class="map1">ارومیه</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/ahwaz/"
-                                                                            class="map19">اهواز</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/ilam/"
-                                                                            class="map10">ایلام</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/bojnoord/"
-                                                                            class="map27">بجنورد</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/booshehr/"
-                                                                            class="map18">بندر بوشهر</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/bandarabbas/"
-                                                                            class="map30">بندر عباس</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/birjand/"
-                                                                            class="map31">بیرجند</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/tabriz/"
-                                                                            class="map3">تبریز</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/khoramabad/"
-                                                                            class="map11">خرم آباد</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/rasht/"
-                                                                            class="map9">رشت</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/zahedan/"
-                                                                            class="map28">زاهدان</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/zanjan/"
-                                                                            class="map5">زنجان</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/semnan/"
-                                                                            class="map26">سمنان</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/sanandaj/"
-                                                                            class="map6">سنندج</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/shahrekord/"
-                                                                            class="map17">شهرکرد</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/shiraz/"
-                                                                            class="map22">شیراز</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/qom/"
-                                                                            class="map13">قم</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/kerman/"
-                                                                            class="map29">کرمان</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/kermanshah/"
-                                                                            class="map12">کرمانشاه</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/kish/"
-                                                                            class="map30">کیش</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/gorgan/"
-                                                                            class="map25">گرگان</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/mazandaran/"
-                                                                            class="map7">مازندران</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/hamedan/"
-                                                                            class="map4">همدان</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/yasooj/"
-                                                                            class="map20">یاسوج</a></li>
-                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/yazd/"
-                                                                            class="map21">یزد</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/tehran/" class="map16">تهران</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/isfahan/" class="map23">اصفهان</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/karaj/" class="map15">کرج</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/mashhad/" class="map24">مشهد</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/ghazvin/" class="map8">قزوین</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/arak/" class="map14">اراک</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/ardebil/" class="map2">اردبیل</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/oroomieh/" class="map1">ارومیه</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/ahwaz/" class="map19">اهواز</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/ilam/" class="map10">ایلام</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/bojnoord/" class="map27">بجنورد</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/booshehr/" class="map18">بندر بوشهر</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/bandarabbas/" class="map30">بندر عباس</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/birjand/" class="map31">بیرجند</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/tabriz/" class="map3">تبریز</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/khoramabad/" class="map11">خرم آباد</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/rasht/" class="map9">رشت</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/zahedan/" class="map28">زاهدان</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/zanjan/" class="map5">زنجان</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/semnan/" class="map26">سمنان</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/sanandaj/" class="map6">سنندج</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/shahrekord/" class="map17">شهرکرد</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/shiraz/" class="map22">شیراز</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/qom/" class="map13">قم</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/kerman/" class="map29">کرمان</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/kermanshah/" class="map12">کرمانشاه</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/kish/" class="map30">کیش</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/gorgan/" class="map25">گرگان</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/mazandaran/" class="map7">مازندران</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/hamedan/" class="map4">همدان</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/yasooj/" class="map20">یاسوج</a></li>
+                                <li class="col-md-12 col-sm-12 col-xs-8"><a href="http://netbarg.com/yazd/" class="map21">یزد</a></li>
                             </ul>
                         </div>
                     </div>
@@ -1680,21 +1067,7 @@
         </div>
     </div>
 </div>
-<script type="text/javascript">window.NREUM || (NREUM = {});
-NREUM.info = {
-    "beacon": "bam.nr-data.net",
-    "licenseKey": "322454d465",
-    "applicationID": "113564921",
-    "transactionName": "NlwEbEJSDUoCVUINVw8WM0pZHApXB1NOSkgJSQ==",
-    "queueTime": 0,
-    "applicationTime": 99,
-    "atts": "GhsHGgpIHkQ=",
-    "errorBeacon": "bam.nr-data.net",
-    "agent": ""
-}</script>
-</body>
-</html>
-<script type="application/ld+json">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"322454d465","applicationID":"113564921","transactionName":"NlwEbEJSDUoCVUINVw8WM0pZHApXB1NOSkgJSQ==","queueTime":0,"applicationTime":94,"atts":"GhsHGgpIHkQ=","errorBeacon":"bam.nr-data.net","agent":""}</script></body></html><script type="application/ld+json">
       { "@context" : "http://schema.org",
       "@type" : "Organization",
       "legalName" : "Netbarg",
@@ -1720,7 +1093,6 @@ NREUM.info = {
       "https://www.youtube.com/user/NetBarg",
       "http://instagram.com/mynetbarg"]
       }
-
 
 
 </script>
